@@ -5,17 +5,29 @@ import React, { Component } from 'react';
 class StartText extends Component {
     state = {}
     render() {
-        let { viewTextStyle, textStyle } = Styles;
+        let { viewTextStyle, textStyleHeaderText, image, textStyleSubHeaderText } = Styles;
         return (
             <View>
                 <Image
                     source={{ uri: "https://wowslider.com/sliders/demo-80/data1/images/sheet546475_1920.jpg" }}
-                    style={{ width: '100%', height: 400}}
+                    style={image}
                     resizeMode="cover"
                 />
                 <View style={viewTextStyle}>
-                    <Text style={textStyle}>
+                    <Text style={textStyleHeaderText}>
                         {'Prueba de demostración'}
+                    </Text>
+
+                    <Text style={textStyleSubHeaderText}>
+                        {'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'}
+                    </Text>
+
+                    <Text style={textStyleSubHeaderText}>
+                        {'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'}
+                    </Text>
+
+                    <Text style={textStyleSubHeaderText}>
+                        {'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'}
                     </Text>
                 </View>
             </View>
@@ -26,12 +38,28 @@ class StartText extends Component {
 const Styles = StyleSheet.create({
     viewTextStyle: {
         position: "absolute",
-        justifyContent: "flex-start"
+        justifyContent: "flex-start",
+        paddingLeft: 80,
     },
-    textStyle: {
-        fontSize: 23,
+    image: {
+        width: '100%',
+        height: 400,
+        maxWidth: '100%',
+        paddingHorizontal: 100,
+        paddingVertical: 100
+    },
+    textStyleHeaderText: {
+        fontSize: 44,
         fontWeight: 'bold',
-        color: 'white'
+        color: 'white',
+        paddingTop: 60,
+    },
+    textStyleSubHeaderText: {
+        fontSize: 30,
+        color: 'white',
+        paddingTop: 10,
+        fontWeight: 'bold'
+
     }
 
 })
