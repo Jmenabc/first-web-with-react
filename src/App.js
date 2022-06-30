@@ -1,11 +1,10 @@
 import AppBar from "./components/AppBar";
-import CarouselMyComponent from "./components/CarouselMyComponent";
-
+import StartText from "./components/StartText";
 function App() {
   return (
     <div className="App">
       <AppBar />
-      <CarouselMyComponent/>
+      <StartText/>
     </div>
   );
 }
