@@ -4,7 +4,7 @@ export class AppBar extends Component {
     state = {}
     render() {
         return (
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a class="navbar-brand">
                     <img src="https://www.jose-aguilar.com/blog/wp-content/uploads/2014/05/bootstrap.png" width="40" height="40" class="d-inline-block align-top" alt="" />
                 </a>
