@@ -3,6 +3,7 @@ import { Row } from "react-bootstrap";
 import React, { Component } from 'react';
 import { Link, BrowserRouter as Router, Routes, Route, } from "react-router-dom";
 import App from "../App";
+import Profile from "../Screens/Profile";
 export class AppBar extends Component {
     state = {}
     render() {
@@ -20,15 +21,17 @@ export class AppBar extends Component {
                             Home
                         </Link>
                     </Text>
-                    <Text
-                        style={upText}
-                        onPress={window.location.href = '#'}
-                    >
-                        Profile
+                    
+                    <Text style={upText}>
+                        <Link to="/Profile" style={linkStyle}>
+                            Profile
+                        </Link>
                     </Text>
+
                 </Row>
                 <Routes>
-                    <Route path="/Home" element={App} />
+                    <Route path="/Home" element={<App/>} />
+                    <Route path="/Profile" element={<Profile/>} />
                 </Routes>
             </Router>
         );
