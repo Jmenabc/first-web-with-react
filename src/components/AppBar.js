@@ -4,10 +4,14 @@ import React, { Component } from 'react';
 import { Link, BrowserRouter as Router, Routes, Route, } from "react-router-dom";
 import App from "../App";
 import Profile from "../Screens/Profile";
+import { AiOutlineUser } from "react-icons/ai";
+
+const Spacer = require('react-spacer')
+
 export class AppBar extends Component {
     state = {}
     render() {
-        let { rowStyle, appBarImg, upText,linkStyle } = styles;
+        let { rowStyle, appBarImg, upText, linkStyle, icon } = styles;
         return (
             <Router>
                 <Row style={rowStyle}>
@@ -21,17 +25,18 @@ export class AppBar extends Component {
                             Home
                         </Link>
                     </Text>
-                    
+
                     <Text style={upText}>
                         <Link to="/Profile" style={linkStyle}>
                             Profile
                         </Link>
                     </Text>
-
+                    <Spacer grow={0.96}/>
+                    <AiOutlineUser style={icon} size={20}/>
                 </Row>
                 <Routes>
-                    <Route path="/Home" element={<App/>} />
-                    <Route path="/Profile" element={<Profile/>} />
+                    <Route path="/Home" element={<App />} />
+                    <Route path="/Profile" element={<Profile />} />
                 </Routes>
             </Router>
         );
@@ -40,8 +45,13 @@ export class AppBar extends Component {
 
 
 const styles = StyleSheet.create({
+
+    icon: {
+        color: 'white',
+        marginTop: 18,
+    },
+
     rowStyle: {
-        backgroundColor: 'grey',
         height: 60
     },
     appBarImg: {

@@ -5,13 +5,12 @@ class CircularImage extends Component {
     state = {}
     render() {
         return (
-            <View style={{backgroundColor: 'grey'}}>
+            <View style={{backgroundColor: 'black'}}>
                 <Image
-                    source={{ uri: '' }}
+                    source={{ uri: 'https://cdn.shopify.com/s/files/1/0229/0839/files/bancos_de_imagenes_gratis.jpg?v=1630420628&width=1024' }}
                     borderRadius={16}
 
                 />
-                <Text style={{color:'black'}}>aaaaaa</Text>
             </View>
         );
     }
